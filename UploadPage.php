@@ -5,7 +5,6 @@ $target_file1 = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 //PATHINFO_EXTENSION
 $imageFileType = pathinfo($target_file1,PATHINFO_EXTENSION);
 
-header('Content-Type: text/html; charset=windows-1255'); 
 //Random string (for the filename) //changing names to avoid exploits..
 function generateRandomString($length = 10) {
     $characters = 'qwertyuiopasdfghjklzxcvbnm1234567890';
