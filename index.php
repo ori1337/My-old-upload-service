@@ -91,7 +91,7 @@
 					echo '<b style="font-size:150%;color:#de4848d1" >BACK TO HOME PAGE:<b/><a href="index.php">here</a><br/>';
 					echo '<h2 style="font-size:150%;color:#3cbf2cd1">Your IMG:</h2>';
 					echo '<a href="uploads/' . htmlspecialchars($_GET["img"]).'" download="'.htmlspecialchars($_GET["img"]).'">
-					<img style="height: 600px;" src="uploads/' . htmlspecialchars($_GET["img"]) . '" alt="'. htmlspecialchars($_GET["img"]) .'"></a>';
+					<img height="450" width="850" src="uploads/' . htmlspecialchars($_GET["img"]) . '" alt="'. htmlspecialchars($_GET["img"]) .'"></a>';
 					if($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType || "jpeg" && $imageFileType || "gif"){
 						echo '<BR/><b style="color:#00FFFF">if the file is img, Click on the img to download it to your computer</b>';
 					}
@@ -110,8 +110,9 @@
 				}
 				
 				if(htmlspecialchars($_GET["video"]) != null){
-					echo '<b style="color:#de4848d1" >BACK TO HOME PAGE:<b/><a style="color:#3cbf2cd1" href="index.php">here</a><br/>';
-					echo '<video src="'.'uploads/'.htmlspecialchars($_GET["video"]).'" controls></video><br/>';
+					echo "<b style=\"color:#de4848d1\" >BACK TO HOME PAGE:<b/><a style=\"color:#3cbf2cd1\" href=\"index.php\">here</a><br/>\n";
+	echo "			<video height=\"450\" width=\"850\" src=\"uploads/".htmlspecialchars($_GET["video"])."\" controls></video><br/>\n";
+	echo "			<a href=\"uploads/".htmlspecialchars($_GET["video"])."\" download=\"".htmlspecialchars($_GET["video"])."\"><h1>DOWNLOAD</h1></a>\n";
 				}
 				/*if(htmlspecialchars($_GET["video"]) != null || htmlspecialchars($_GET["video"]) != null || htmlspecialchars($_GET["video"]) != null ||){
 					
